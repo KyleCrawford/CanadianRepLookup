@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New/Mode Test</title>
+
+    <script src="javascript/js.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body onload="init()">
+    <div>
+        <h1 id="header">Representative Lookup by Postal Code</h1>
+        <form class="mainForm">
+            <div>
+                <div>
+                    <input name="postal" id="postalInput">
+                </div>
+                <button id="postalButton">Search by Postal Code</button>
+            </div>
+
+        </form>
+    </div>
+    <h2 class="name-card-info">Representative Results</h2>
+    <div id="mainContainer"></div>
+
+    <template id="nameCard">
+        <div class="inline-block">
+            <img onerror="this.onerror=null; this.src='./resources/defaultPhoto.png'" class="person-img"></img>
+            <div class="name-card-info">First Last</div>
+            <div class="name-card-info">Elected Office</div>
+        </div>
+    </template>
+
+    <template id="infoPanel">   
+            <div class="inline-block">
+                <h3 class="representative-title">Representative Info</h3>
+                <div class="label-space">Polital Party</div>
+                <div class="underline-content">
+                    <div class="basic-label label-space">District Name: </div>
+                    <div class="inline-block">No District Found</div>
+                </div>
+                <div class="underline-content">
+                    <div class="basic-label label-space">Representative Set: </div>
+                    <div class="inline-block">No Representative Set Found</div>
+                </div>
+                <div class="underline-content">
+                    <div class="basic-label label-space">Email: </div>
+                    <div class="inline-block">No Email Found</div>
+                </div>
+                <div class="website-links">
+                    <div>Personal Website</div>
+                    <div>Website</div>
+                    <div>Source</div>
+                </div>
+            </div>
+    </template>
+
+    <template id="locationInfo">
+        <div>
+            <div class="location-container">
+                <div class="location-label">Type: </div><div class="location-content">No Type Found</div>  
+            </div>
+            <div class="location-container">
+                <div class="location-label">Tel: </div><div class="location-content">No Number Found</div>
+                <div class="location-space"></div>
+                <div class="location-label">Fax: </div><div class="location-content">No Number Found</div>  
+            </div>
+            <div>
+                <div class="location-label">Postal: </div><div class="location-content-large">No Postal Code Found</div>
+            </div>
+        </div>
+    </template>
+
+    <template id="error">
+        <div class="error">
+            <h1>An error occurred</h1>
+            <p></p>
+        </div>
+    </template>
+</body>
+</html>
